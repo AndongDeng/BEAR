@@ -16,7 +16,7 @@ The pre-trained models can be downloaded [here]().
 ### Standard Finetuning
 We build our stanard finetuning based on a popular video understanding toolbox [MMAction2](https://github.com/open-mmlab/mmaction2).
 
-We provide specific training steps [here]().
+We provide specific training steps [here](https://github.com/BEAR-CVPR2023/BEAR/tree/main/benchmark/finetuning).
 
 ### Few-shot Finetuning
 
