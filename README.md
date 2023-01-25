@@ -3,7 +3,7 @@
 ## Introduction
 BEAR consists of 18 datasets covering five data domain: daily life, sports, gesture, anomaly actions and instructional actions. Besides, BEAR includes several evaluation paradigms: standard finetuning, few-shot finetuning, zero-shot and domain adaptation. In this work, we provide evaluation results of 6 popular video models on BEAR. We hope BEAR can serve as a fair and challenging evaluation benchmark to gain insights on building next-generation spatiotemporal learners.
 
-The evaluation is extremely simple since we provide all scripts in this codebase. The users only need to download datasets and run the scripts provided.
+The evaluation is **extremely simple** since we provide all scripts in this codebase. The users only need to download datasets and run the scripts provided.
 
 
 ## Datasets Download and Pre-processing
