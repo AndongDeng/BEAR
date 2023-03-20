@@ -1,18 +1,17 @@
 # BEAR: A BEnchmark on video Action Recognition
 ###  [ArXiv]()
 
-![BEAR](https://github.com/AndongDeng/BEAR/blob/main/figs/BEAR_teaser.jpg "BEAR")
+[BEAR]() <br>
+ [Andong Deng](https://dengandong.github.io/)<sup>1</sup>,
+ [Taojiannan Yang](https://sites.google.com/view/taojiannanyang/home)<sup>1</sup>,
+ [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<sup>1</sup><br>
+ <sup>1</sup> CRCV, University of Central Florida
 
 <div align="center">
     <img src="figs/BEAR_teaser.jpg">
 </div>
 
-[FineGym: A Hierarchical Video Dataset for Fine-grained Action Understanding](https://sdolivia.github.io/FineGym/) <br>
- [Andong Deng](https://dengandong.github.io/)<sup>1</sup>,
- [Taojiannan Yang](https://sites.google.com/view/taojiannanyang/home)<sup>1</sup>,
- [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<sup>1</sup>
 
- <sup>1</sup> CRCV, University of Central Florida
 
 ## Introduction
 The goal of building a benchmark (suite of datasets) is to provide a unified protocol for fair evaluation and thus facilitate the evolution of a specific area. Nonetheless, we point out that existing protocols of action recognition could yield partial evaluations due to several limitations. To comprehensively probe the effectiveness of spatiotemporal representation learning, we introduce BEAR, a new BEnchmark on video Action Recognition. BEAR is a collection of 18 video datasets grouped into 5 categories (anomaly, gesture, daily, sports, and instructional), which covers a diverse set of real-world applications. With BEAR, we thoroughly evaluate 6 common spatiotemporal models pre-trained by both supervised and self-supervised learning. We also report transfer performance via standard finetuning, few-shot finetuning, and unsupervised domain adaptation. Our observation suggests that current state-of-the-arts cannot solidly guarantee high performance on datasets close to real-world applications and we hope BEAR can serve as a fair and challenging evaluation benchmark to gain insights on building next-generation spatiotemporal learners.
