@@ -1,5 +1,5 @@
 # BEAR: A BEnchmark on video Action Recognition
-<iframe src="https://github.com/AndongDeng/BEAR/blob/main/figs/BEAR.pdf" width="100%" height="500px"></iframe>
+![BEAR](https://github.com/AndongDeng/BEAR/blob/main/figs/BEAR.pdf)
 
 
 ## Introduction
