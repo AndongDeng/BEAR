@@ -36,9 +36,19 @@ We provide downloading and pre-processing pipeline [here](https://github.com/BEA
 
 
 ## Benchmark
+### Pre-trained Models
 Based on pre-trained models on Kinetics400, we provide 4 types of down stream tasks for evaluation: standard finetuning, few-shot finetuning, zero-shot evaluation and domain adaptation.
 
-The pre-trained models can be downloaded [here]().
+The pre-trained models can be downloaded from below:
+| model         | Supervised (Top-1 Accuracy) | Self-supervised (KNN evaluation)  |
+| ------------- | --------- | ---- |
+| TSN           | 77.6 [Google Drive](https://drive.google.com/file/d/1dcrNidY0XlZKJCl6T4ta_La1dzceoWKp/view?usp=share_link)     | 43.1 [Google Drive]() |
+| TSM           | 76.4 [Google Drive]()      | 43.2 [Google Drive]() |
+| I3D           | 74.2 [Google Drive]()      | 51.3 [Google Drive]() |
+| NL            | 73.9 [Google Drive]()     | 50.7 [Google Drive]() |
+| TimeSformer   | 75.8 [Google Drive]()     | 50.3 [Google Drive]() |
+| VideoSwin     | 77.6 [Google Drive]()     | 51.1 [Google Drive]() |
+
 
 ### Standard Finetuning
 We build our stanard finetuning based on a popular video understanding toolbox [MMAction2](https://github.com/open-mmlab/mmaction2).
