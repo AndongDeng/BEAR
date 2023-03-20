@@ -1,9 +1,34 @@
 # BEAR: A BEnchmark on video Action Recognition
+![BEAR](https://github.com/AndongDeng/BEAR/figs/BEAR.pdf "BEAR")
+
 
 ## Introduction
-BEAR consists of 18 datasets covering five data domain: daily life, sports, gesture, anomaly actions and instructional actions. Besides, BEAR includes several evaluation paradigms: standard finetuning, few-shot finetuning, zero-shot and domain adaptation. In this work, we provide evaluation results of 6 popular video models on BEAR. We hope BEAR can serve as a fair and challenging evaluation benchmark to gain insights on building next-generation spatiotemporal learners.
+The goal of building a benchmark (suite of datasets) is to provide a unified protocol for fair evaluation and thus facilitate the evolution of a specific area. Nonetheless, we point out that existing protocols of action recognition could yield partial evaluations due to several limitations. To comprehensively probe the effectiveness of spatiotemporal representation learning, we introduce BEAR, a new BEnchmark on video Action Recognition. BEAR is a collection of 18 video datasets grouped into 5 categories (anomaly, gesture, daily, sports, and instructional), which covers a diverse set of real-world applications. With BEAR, we thoroughly evaluate 6 common spatiotemporal models pre-trained by both supervised and self-supervised learning. We also report transfer performance via standard finetuning, few-shot finetuning, and unsupervised domain adaptation. Our observation suggests that current state-of-the-arts cannot solidly guarantee high performance on datasets close to real-world applications and we hope BEAR can serve as a fair and challenging evaluation benchmark to gain insights on building next-generation spatiotemporal learners.
 
 The evaluation is **extremely simple** since we provide all scripts in this codebase. The users only need to download datasets and run the scripts provided.
+
+The following table includes all the statistics about the 18 datasets collected in BEAR:
+
+| Dataset                                | Domain         | # Classes | # Clip  | Avg Length (sec.) | Training data per class (min, max) | Split ratio | Video source                 | Video viewpoint |
+|----------------------------------------|----------------|---------------|-----------|-------------------|-------------------------------------|-------------|------------------------------|----------------|
+| [XD-Violence](https://roc-ng.github.io/XD-Violence/)          | Anomaly        | 5             | 4135      | 14.94             | (36, 2046)                          | 3.64:1      | Movies, sports, CCTV, etc.  | 3rd, sur.      |
+| [UCF Crime](https://www.crcv.ucf.edu/projects/real-world/)      | Anomaly        | 12            | 600       | 132.51            | 38                                  | 3.17:1      | CCTV Camera                  | 3rd, sur.      |
+| [MUVIM](https://arxiv.org/pdf/2206.12740.pdf)        | Anomaly        | 2             | 1127      | 68.1              | (296, 604)                          | 3.96:1      | Self-collected               | 3rd, sur.      |
+| [WLASL100](https://dxli94.github.io/WLASL/)             | Gesture        | 100           | 1375      | 1.23              | (7, 20)                             | 5.37:1      | Sign language website        | 3rd            |
+| [Jester](https://developer.qualcomm.com/software/ai-datasets/jester)    | Gesture        | 27            | 133349    | 3                 | (3216, 9592)                        | 8.02:1      | Self-collected               | 3rd            |
+| [UAV Human](https://github.com/sutdcv/UAV-Human)           | Gesture        | 155           | 22476     | 5                 | (20, 114)                           | 2:1         | Self-collected               | 3rd, dro.      |
+| [CharadesEgo](https://prior.allenai.org/projects/charades-ego) | Daily        | 157           | 42107     | 10.93             | (26, 1120)                          | 3.61:1      | YouTube                      | 1st            |
+| [Toyota Smarthome](https://project.inria.fr/toyotasmarthome/) | Daily          | 31            | 14262     | 1.78              | (23, 2312)                          | 1.63:1      | Self-collected               | 3rd, sur.      |
+| [Mini-HACS](http://hacs.csail.mit.edu/)          | Daily          | 200           | 10000     | 2                 | 50                                  | 4:1         | YouTube                      | 1st, 3rd       |
+| [MPII Cooking](https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/human-activity-recognition/mpii-cooking-activities-dataset) | Daily        | 67   | 3748      | 153.04  | (5, 217)  | 4.69:1      | Self-collected  | 3rd  |
+| [Mini-Sports1M](https://cs.stanford.edu/people/karpathy/deepvideo/)        | Sports         | 487           | 24350     | 10                | 50                                  | 4:1         | YouTube                      | 3rd            |
+| [FineGym99](https://sdolivia.github.io/FineGym/)  | Sports        |  99   | 20389     | 1.65        | (33, 951) | 2.24:1            | Competition videos                 | 3rd |
+| [MOD20](https://asankagp.github.io/mod20/)  | Sports        |   20  | 2324     | 7.4        | (73, 107)   | 2.29:1           | YouTube and self-collected         | 3rd, dro. 
+| [COIN](https://coin-dataset.github.io/)   | Instructional |  180  | 6655  | 37.01        | (10, 63)    | 3.22:1            | YouTube                            | 1st, 3rd|
+| [MECCANO](https://iplab.dmi.unict.it/MECCANO/)  | Instructional |   61  | 7880         | 2.82       | (2, 1157)    | 1.79:1      | Self-collected                     | 1st |
+| [INHARD](https://github.com/vhavard/InHARD)   | Instructional |   14  | 5303        | 1.36  | (27, 955)    | 2.16:1            | Self-collected                     | 3rd |
+| [PETRAW](https://www.synapse.org/#!Synapse:syn25147789)   | Instructional |    7  | 9727      | 2.16       | (122, 1262)       | 1.5:1    | Self-collected                     | 1st |
+| [MISAW](https://www.synapse.org/#!Synapse:syn21776936/wiki/601700)    | Instructional |   20  | 1551     | 3.8       | (1, 316)   | 2.38:1             | Self-collected                     | 1st | 
 
 
 ## Datasets Download and Pre-processing
@@ -68,13 +93,7 @@ The finetuning results of self-supervised pre-training are shown below:
 
 
 ### Few-shot Finetuning
-| epoch | N=1         | N=2         | N=5         | N=10        | N=20        | 100-class acc |
-|-------|-------------|-------------|-------------|-------------|-------------|---------------|
-| 90    | 52.11/75.32 | 57.34/80.43 | 61.49/85.88 | 64.83/88.49 | 67.17/89.33 | 82.47         |
-| 80    | 52.36/75.51 | 56.44/81.00 | 61.77/86.59 | 64.58/89.09 | 66.66/89.87 | 82.68         |
-| 70    | 52.92/76.48 | 57.44/81.03 | 62.20/86.78 | 65.08/89.14 | 67.05/89.90 | 82.82         |
-| 60    | 51.28/74.77 | 55.68/80.07 | 61.11/86.35 | 63.86/88.76 | 65.95/89.49 | 82.16         |
-| 50    | 52.07/74.94 | 55.64/80.20 | 60.77/86.24 | 63.95/88.33 | 65.64/89.23 | 81.28         |
+
 ### Zero-shot Evaluation
 
 ### Domain Adaptation
