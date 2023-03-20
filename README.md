@@ -1,5 +1,5 @@
 # BEAR: A BEnchmark on video Action Recognition
-![BEAR](https://github.com/AndongDeng/BEAR/figs/BEAR.pdf "BEAR")
+![BEAR](https://github.com/AndongDeng/BEAR/blob/main/figs/BEAR.pdf "BEAR")
 
 
 ## Introduction
