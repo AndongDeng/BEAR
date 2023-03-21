@@ -27,7 +27,7 @@ MUVIM  (Multi Visual Modality Fall Detection Dataset) is a recently released fal
 - Then you can see all the content in the shown folder, and you only need to obtain `ZED_RGB/`
 
     <div align="center">
-        <img src="download.jpeg">
+        <img src="folder.jpeg">
     </div>
 
 - Put all data under:  `./data/MUVIM/videos`
