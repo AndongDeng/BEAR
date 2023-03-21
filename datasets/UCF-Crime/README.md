@@ -12,8 +12,13 @@ UCF-Crime is a challenging anomaly video dataset collected from surveillance cam
 
     [Dropbox](https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?dl=0)
 
+    **Note**: Each zip file can be unzip separately. (*TODO*)
+
 
 - Put all the zip files under:  `./data/UCF-Crime/videos`
+
+
+### 2. Preprocessing
 
 - Run the following command: 
     ```

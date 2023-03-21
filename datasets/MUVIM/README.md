@@ -32,6 +32,8 @@ MUVIM  (Multi Visual Modality Fall Detection Dataset) is a recently released fal
 
 - Put all data under:  `./data/MUVIM/videos`
 
+### 2. Preprocessing
+
 - Run the following command: 
     ```
     bash prerpocess_muvim.sh

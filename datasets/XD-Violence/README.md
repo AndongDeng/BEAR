@@ -22,6 +22,9 @@ XD-violence is a video anomaly dataset that includes data from various sources s
 
 - Put all the zip files under:  `./data/XD-Violence/videos`
 
+
+### 2. Preprocessing
+
 - Run the following command: 
     ```
     bash prerpocess_xd_violence.sh
