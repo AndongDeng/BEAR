@@ -6,19 +6,24 @@ Charades-Ego is a large-scale dataset with paired first- and third-person videos
 
 ## Download and preprocessing
 
-### 1. Download videos
-
-- The videos are officially provided in Dropbox with the following link:
-
-    [Data(scaled to 480p, 11GB)](https://ai2-public-datasets.s3-us-west-2.amazonaws.com/charades/CharadesEgo_v1_480.tar)<br>
-    [Annotations](https://ai2-public-datasets.s3-us-west-2.amazonaws.com/charades/CharadesEgo.zip)
-
-
-- Put all the zip files under:  `./data/CharadesEGO/videos`
-
-### 2. Preprocessing
-
-- Run the following command: 
+- Run the following command for downloading and preprocessing: 
     ```
-    bash prerpocess_charadesego.sh
+    bash download_prerpocess_charadesego.sh
     ```
+
+- Note1: There are two kinds of videos in CharagesEGO, one is with name xxxxx.mp4, which are the normal 3rd view videos, and another is with name xxxxxEGO.mp4, which are the 1st view videos. As aforementioned, we only keep the latter in our BEAR. Besides, to know more about the details of the aormat of annotations, please refer to the [official README](annotations/README.txt), which includes all the original annotations, but we only keep 'only1st' version in BEAR.
+
+- Note2: Ensure the folder structure after excute the command is as follows:
+
+  ```
+  ./CharadesEGO/
+  |
+  |───videos/
+  │    └───D3TR8EGO_c1563.90_12.00.mp4
+  │    └───D3TR8EGO_c0618.20_12.50.mp4
+  │    └───...
+  └───annotations/
+  │    └───Charades_v1_classes.txt
+  │    └───CharadesEgo_v1_test_only1st.csv
+  │    └───CharadesEgo_v1_train_only1st.csv
+  ```
