@@ -1,5 +1,20 @@
 # Datasets Download and Pre-processing in BEAR
 
+- The general folder structure for BEAR datasets should be as follows:
+  ```
+  ./data/
+  |
+  |───dataset1/
+  │    └───videos/
+  │    └───annotations/
+  └───dataset2
+  │    └───videos/
+  │    └───annotations/
+  └───dataset3/
+  │    └───videos/
+  │    └───annotations/
+  ```
+
 ## Anomaly Action Datasets
 We include XD-Violence, UCF-Crime and MUVIM as the three anomaly video datasets in BEAR.
 
