@@ -27,3 +27,8 @@ Charades-Ego is a large-scale dataset with paired first- and third-person videos
   │    └───CharadesEgo_v1_test_only1st.csv
   │    └───CharadesEgo_v1_train_only1st.csv
   ```
+
+- Note3: If you want to keep the original videos, just remove the last line in `download_preprocess_charadesego.sh`:
+    ```
+    rm -rf CharadesEgo_v1/
+    ```
