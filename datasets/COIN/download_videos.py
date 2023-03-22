@@ -3,7 +3,7 @@
 import json
 import os
 
-output_path = './videos'
+output_path = './raw_coin_videos'
 json_path = './COIN.json'
 
 if not os.path.exists(output_path):
@@ -19,7 +19,8 @@ for youtube_id in data:
 	vid_loc = output_path + '/' + str(type)
 	if not os.path.exists(vid_loc):
 		os.mkdir(vid_loc)
-	os.system('youtube-dl -o ' + vid_loc + '/' + youtube_id + '.mp4' + ' -f best ' + url)
+	if not os.path.exists(os.path.join(output_path, youtube_id + '.mp4')):
+		os.system('youtube-dl -o ' + vid_loc + '/' + youtube_id + '.mp4' + ' -f best ' + url)
 	
 	# To save disk space, you could download the best format available 
 	# 	but not better that 480p or any other qualities optinally

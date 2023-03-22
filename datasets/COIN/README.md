@@ -6,18 +6,12 @@ COIN dataset is a large-scale dataset built for comprehensive instructional vide
 
 ## Download and preprocessing
 
-### 1. Download videos
-
-- You can simply run the officially provided download script to download COIN from YouTube:
-```
-    python download_videos.py
-```
-
-- Put all the files under:  `./data/COIN/videos`
-
-### 2. Preprocessing
-
-- Run the following command: 
+- Run the following command for downloading and preprocessing: 
     ```
-    bash prerpocess_coin.sh
+    bash download_prerpocess_coin.sh
+    ```
+
+- Note: If you want to keep the original videos, just remove the last line in `download_preprocess_charadesego.sh`:
+    ```
+    rm -rf raw_coin_videos/
     ```
