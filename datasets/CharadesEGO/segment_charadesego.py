@@ -29,6 +29,7 @@ for row in anno_csv_reader:
         for sub_action in action_split_list:
             action_cls, start, end = sub_action.split(' ')
             target_segment_file_name = video_id + '_' + action_cls + str(start) + '_' + str(end) + '.mp4'
+            target_path = os.path.join(segmented_video_root, target_segment_file_name)
 
             start = int(float(start))
             end = int(float(end))
@@ -38,6 +39,6 @@ for row in anno_csv_reader:
             ss_minute = (start - ss_hour * 3600) // 60
             ss_second = start - ss_hour * 3600 - ss_minute * 60
             ss = str(ss_hour).zfill(2) + ':' + str(ss_minute).zfill(2) + ':' + str(ss_second).zfill(2)
-            cmd = 'ffmpeg -ss ' + ss + ' -i ' + video_path + ' -t ' + duration + ' ' + target_segment_file_name
+            cmd = 'ffmpeg -ss ' + ss + ' -i ' + video_path + ' -t ' + duration + ' ' + target_path
             os.system(cmd)
-            print('Successfully segment {} to {} !'.format(video_path, target_segment_file_name))
+            print('Successfully segment {} to {} !'.format(video_path, target_path))
