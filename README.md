@@ -35,7 +35,7 @@ The following table includes all the statistics about the 18 datasets collected 
 | [Mini-Sports1M](https://cs.stanford.edu/people/karpathy/deepvideo/)        | Sports         | 487           | 24350     | 10                | 50                                  | 4:1         | YouTube                      | 3rd            |
 | [FineGym99](https://sdolivia.github.io/FineGym/)  | Sports        |  99   | 20389     | 1.65        | (33, 951) | 2.24:1            | Competition videos                 | 3rd |
 | [MOD20](https://asankagp.github.io/mod20/)  | Sports        |   20  | 2324     | 7.4        | (73, 107)   | 2.29:1           | YouTube and self-collected         | 3rd, dro. 
-| [COIN](https://coin-dataset.github.io/)   | Instructional |  180  | 6655  | 37.01        | (10, 63)    | 3.22:1            | YouTube                            | 1st, 3rd|
+| [COIN](https://coin-dataset.github.io/)   | Instructional |  180  | 10426  | 37.01        | (10, 63)    | 3.22:1            | YouTube                            | 1st, 3rd|
 | [MECCANO](https://iplab.dmi.unict.it/MECCANO/)  | Instructional |   61  | 7880         | 2.82       | (2, 1157)    | 1.79:1      | Self-collected                     | 1st |
 | [INHARD](https://github.com/vhavard/InHARD)   | Instructional |   14  | 5303        | 1.36  | (27, 955)    | 2.16:1            | Self-collected                     | 3rd |
 | [PETRAW](https://www.synapse.org/#!Synapse:syn25147789)   | Instructional |    7  | 9727      | 2.16       | (122, 1262)       | 1.5:1    | Self-collected                     | 1st |
