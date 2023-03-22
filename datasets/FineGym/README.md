@@ -7,24 +7,12 @@ FineGym is a recently released fine-grained dataset, which considers sub-actions
 
 ## Download and preprocessing
 
-### 1. Download videos
-
-- The split and annotations are officially provided:
-
-	[Gym99 train split](https://sdolivia.github.io/FineGym/resources/dataset/gym99_train_element_v1.1.txt)<br>
-	[Gym99 val split](https://sdolivia.github.io/FineGym/resources/dataset/gym99_val_element.txt)<br>
-	[Temporal annotation (json)](https://sdolivia.github.io/FineGym/resources/dataset/finegym_annotation_info_v1.1.json)
-
-- You can simply run the following script to download the videos from YouTube:
-```
-    python download.py
-```
-
-- Put all the files under:  `./data/FineGym/videos`
-
-### 2. Preprocessing
-
-- Run the following command: 
+- Run the following command for downloading and preprocessing: 
     ```
-    bash prerpocess_finegym.sh
+    bash download_prerpocess_finegym.sh
+    ```
+
+- Note: If you want to keep the raw videos, just remove the last line in `download_preprocess_finegym.sh`:
+    ```
+    rm -rf raw_finegym_videos/
     ```

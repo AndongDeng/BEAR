@@ -4,7 +4,7 @@ import json
 
 
 data_info = json.load(open('finegym_annotation_info_v1.0.json', 'r'))
-raw_video_root = './raw/'
+raw_video_root = './raw_finegym_videos/'
 if not os.path.exists(raw_video_root):
     os.mkdir(raw_video_root)
 

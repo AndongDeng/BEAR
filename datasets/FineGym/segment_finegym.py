@@ -3,7 +3,7 @@ import cv2
 import json
 
 data_info = json.load(open('finegym_annotation_info_v1.0.json', 'r'))
-data_root = './raw/'
+data_root = './raw_finegym_videos/'
 video_root = './videos/'
 if not os.path.exists(video_root):
     os.mkdir(video_root)
