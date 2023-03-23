@@ -1,4 +1,4 @@
-# Datasets in <img src="../figs/bear.png" width="25"/>BEAR
+# <img src="../figs/bear.png" width="25"/>BEAR Datasets 
 
 ## Introduction
 Despite new datasets being introduced every year, the most widely adopted benchmarks in the video action recognition community are Kinetics-400/600/700, Something-something-v1/v2, UCF-101 and HMDB-51. 
