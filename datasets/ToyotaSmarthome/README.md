@@ -12,10 +12,3 @@ Toyota Smarthome is a 3rd view dataset containing videos from different cameras 
 
 
 - Put all the files under:  `./data/ToyotaSmarthome/videos`
-
-### 2. Preprocessing
-
-- Run the following command: 
-    ```
-    bash prerpocess_toyota_smarthome.sh
-    ```
