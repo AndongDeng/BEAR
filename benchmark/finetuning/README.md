@@ -22,9 +22,16 @@
     pip install -v -e . --user
     ```
 
-## Training
-The config file for each model in each dataset can be found in `./configs/datasets/{dataset_name}/`.
+## Config Files
+The config file for each model in each dataset can be found in `./configs/datasets/{dataset_name}/`. After add your own models, you have to make modifications in config files to train your own models. Please refer to the [official config tutorial](https://github.com/open-mmlab/mmaction2/blob/master/docs/en/tutorials/1_config.md) for more information.
 
+
+## Models
+The model definitions are under `./mmaction/models/`. You can add your models here. 
+To learn about more format, please refer to the [official model tutorial](https://github.com/open-mmlab/mmaction2/blob/master/docs/en/tutorials/5_new_modules.md).
+
+
+## Training
 Example:
 To finetuning a VideoSwin in UCF-Crime in a distributed manner in 4 GPUs, simply run:
     
