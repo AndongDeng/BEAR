@@ -16,12 +16,3 @@ UCF-Crime is a challenging anomaly video dataset collected from surveillance cam
 
 
 - Put all the zip files under:  `./data/UCF-Crime/videos`
-
-
-### 2. Preprocessing
-
-- Run the following command: 
-    ```
-    bash prerpocess_ucf_crime.sh
-    ```
-
