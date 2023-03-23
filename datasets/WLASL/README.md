@@ -6,18 +6,8 @@ WLASL, short for World-Level American Sign Language, is built for sign language 
 
 ## Download and preprocessing
 
-### 1. Download videos
-
-- The dataset can be downloaded via the following command:
-    ```
-    python download_wlasl.py
-    ```
-
-- Put all the files under:  `./data/wlasl/videos`
-
-### 2. Preprocessing
-
 - Run the following command: 
+
     ```
-    bash prerpocess_wlasl.sh
+    bash download_prerpocess_wlasl.sh
     ```
