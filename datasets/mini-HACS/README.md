@@ -7,21 +7,8 @@ HACS, human action clips and segments, is a large-scale dataset for both action 
 
 ## Download and preprocessing
 
-### 1. Download videos
-
-- The videos can be download via the following command:
+- Run the following command for downloading and preprocessing: 
 
     ```
-    python download_mini_hacs.py
-    ```
-
-
-
-- Put all the files under:  `./data/mini_hacs/videos`
-
-### 2. Preprocessing
-
-- Run the following command: 
-    ```
-    bash prerpocess_mini_hacs.sh
+    bash download_prerpocess_mini_hacs.sh
     ```
