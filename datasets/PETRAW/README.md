@@ -17,5 +17,5 @@ To cover scenarios as much as possible, we add two medical instructional dataset
 
 - Run the following command: 
     ```
-    bash prerpocess_petraw.sh
+    python decode.py
     ```
