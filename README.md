@@ -5,7 +5,7 @@
  [Andong Deng](https://dengandong.github.io/)<sup>1</sup>,
  [Taojiannan Yang](https://sites.google.com/view/taojiannanyang/home)<sup>1</sup>,
  [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<sup>1</sup><br>
- <sup>1</sup> CRCV, University of Central Florida
+ <sup>1</sup> [CRCV](https://www.crcv.ucf.edu/), [University of Central Florida](https://www.ucf.edu/)
 
 <div align="center">
     <img src="figs/BEAR_teaser.jpg">
@@ -47,12 +47,12 @@ We provide downloading and pre-processing pipeline [here](https://github.com/BEA
 
 
 ## Benchmark
-We provide 4 downstream tasks in BREA:
+We provide 4 evaluation paradigms in BREA:
 
-[Standard Finetuning](#standard-finetuning)<br>
-[Few-shot Finetuning](#few-shot-finetuning)<br>
-[Zero-shot Evaluation](#zero-shot-evaluation)<br>
-[UDA](#domain-adaptation)<br>
+[BEAR-Standard](#standard-finetuning)<br>
+[BEAR-Fewshot](#few-shot-finetuning)<br>
+[BEAR-Zeroshot](#zero-shot-evaluation)<br>
+[BEAR-UDA](#domain-adaptation)<br>
 
 ## Pre-trained Models
 Based on pre-trained models on Kinetics400, we provide 4 types of down stream tasks for evaluation: standard finetuning, few-shot finetuning, zero-shot evaluation and domain adaptation.
