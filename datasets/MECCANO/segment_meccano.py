@@ -34,7 +34,7 @@ def segment_frames(csv_reader, split):
         if not os.path.exists(segment_video_path):
             os.mkdir(segment_video_path)
         
-        raw_vide_root = 'raw_meccano_videos/'
+        raw_vide_root = 'MECCANO_RGB_Videos/'
         raw_video_path = os.path.join(raw_vide_root, video_id)
 
         target_video_path = os.path.join(segment_video_path, target_video_name)
