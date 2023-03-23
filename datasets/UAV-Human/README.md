@@ -12,10 +12,3 @@ UAV Human dataset contains videos captured from unmanned aerial vehicles, which 
 - The dataset is released but you have to first sign the form [here](https://sutdcv.github.io/uav-human-web/).
 
 - Put all the files under:  `./data/UAV-Human/videos`
-
-### 2. Preprocessing
-
-- Run the following command: 
-    ```
-    bash prerpocess_uav_human.sh
-    ```
