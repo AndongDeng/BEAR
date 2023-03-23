@@ -114,10 +114,33 @@ The finetuning results of self-supervised pre-training are shown below:
 
 
 ### Few-shot Finetuning
+Please follow the instructions [here](benchmark/zero-shot/README.md) to perform few-shot evaluation on BEAR.
+
+The few-shot results are shown below: 
+
+<div align="center">
+    <img src="figs/fewshot.png">
+</div>
 
 ### Zero-shot Evaluation
+We build our zero-shot part based on the popular [CLIP](https://github.com/openai/CLIP) and [ActionCLIP](https://github.com/sallymmx/actionclip). Follow the instructions [here](benchmark/zero-shot/README.md) to evaluate zero-shot performance on BEAR.
+
+The zero-shot results are shown below: 
+
+<div align="center">
+    <img src="figs/zeroshot.jpeg">
+</div>
+
 
 ### Domain Adaptation
+Please follow the instructions [here](benchmark/domain-adaptation/README.md) to perform UDA evaluation on BEAR.
+
+The UDA baseline results are shown below: 
+| Dataset               |   T>M    | M>T | MS>MOD | MOD>MS | U>X | X>U | P>MS | Jester | IT>IL | IT>IR | IL>IR | IL>IT | IR>IT | IR>L |
+|-----------------------|-----------|---------|---------|---------|---------|---------|---------|--------|---------|---------|---------|---------|---------|---------|
+| Source only           | 5.32    | 7.36    | 18.25   | 12.76   | 54.20   | 33.33   | 61.45   | 68.73  | 4.18    | 30.39   | 19.01   | 22.65   | 24.14   | 12.42   |
+| Supervised target     | 70.21   | 65.13   | 34.08   | 35.52   | 75.06   | 63.89   | 94.40   | 97.61  | 26.00   | 83.55   | 83.55   | 85.52   | 85.52   | 26.00   |
+
 
 
 
