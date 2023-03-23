@@ -12,8 +12,8 @@ MOD20 is a multi-viewpoint outdoor dataset collected from both YouTube videos an
 
     [Google Drive](https://drive.google.com/file/d/1pqGgUB_Sy1TBlBxB_joT6aoX77ed7cdx/view)
 
+- Download it here.
 
-- Put all the files under:  `./data/mod20/videos`
 
 ### 2. Preprocessing
 
