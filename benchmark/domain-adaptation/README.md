@@ -26,11 +26,11 @@ bash tools/dist_train.sh configs/datasets/mpii_cooking/swin_base_patch244_window
 ### Example of ToyotaSmarthome<-->MPII-Cooking:
 
 <div align="center">
-    <div style="display: inline-block;">
-        <img src="figs/mpii_fig.png">
+    <div style="display: inline-block; width: 45%">
+        <img src="figs/mpii_fig.png" width="100%">
     </div>
-    <div style="display: inline-block;">
-        <img src="figs/toyota_fig.png">
+    <div style="display: inline-block; width: 45%">
+        <img src="figs/toyota_fig.png" width="100%">
     </div>
 </div>
 
@@ -39,13 +39,13 @@ bash tools/dist_train.sh configs/datasets/mpii_cooking/swin_base_patch244_window
 
 <div align="center">
     <div style="display: inline-block; width: 33%">
-        <img src="figs/inhard_left.png">
+        <img src="figs/inhard_left.png" width="100%">
     </div>
     <div style="display: inline-block; width: 33%">
-        <img src="figs/inhard_top.png">
+        <img src="figs/inhard_top.png" width="100%">
     </div>
     <div style="display: inline-block; width: 33%">
-        <img src="figs/inhard_right.png">
+        <img src="figs/inhard_right.png" width="100%">
     </div>
 </div>
 
