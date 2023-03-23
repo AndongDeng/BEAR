@@ -1,27 +1,10 @@
-_base_ = ['../../_base_/default_runtime.py']
-# model setting
-model = dict(
-    type='Recognizer3D',
-    backbone=dict(
-        type='ConvNeXt3DNonLocal',
-        name='base',
-        non_local_cfg=dict(sub_sample=True,
-                          use_scale=False,
-                        #   norm_cfg=dict(type='LN', requires_grad=True),
-                          norm_cfg=None,
-                          mode='gaussian')),
-    cls_head=dict(
-        type='I3DHead',
-        num_classes=157,
-        in_channels=1024,
-        spatial_type='avg',
-        dropout_ratio=0.5,
-        init_std=0.01),
-    # model training and testing settings
-    train_cfg=None,
-    test_cfg=dict(average_clips='prob'))
+_base_ = [
+    '../../_base_/models/i3d_convnext.py', '../../_base_/default_runtime.py'
+]
+# model settings
+model=dict(cls_head=dict(num_classes=157))
 # dataset settings
-dataset_type = 'RawframeDataset'
+dataset_type = 'VideoDataset'
 data_root = 'data/charades_ego/frames/'
 data_root_val = 'data/charades_ego/frames/'
 ann_file_train = 'data/charades_ego/annotations/train.csv'
@@ -30,8 +13,9 @@ ann_file_test = 'data/charades_ego/annotations/test.csv'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_bgr=False)
 train_pipeline = [
-    dict(type='SampleFrames', clip_len=8, frame_interval=8, num_clips=1),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordInit'),
+    dict(type='SampleFrames', clip_len=8, frame_interval=16, num_clips=1),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 256)),
     dict(
         type='MultiScaleCrop',
@@ -47,13 +31,14 @@ train_pipeline = [
     dict(type='ToTensor', keys=['imgs', 'label'])
 ]
 val_pipeline = [
+    dict(type='DecordInit'),
     dict(
         type='SampleFrames',
         clip_len=8,
-        frame_interval=8,
+        frame_interval=16,
         num_clips=1,
         test_mode=True),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 256)),
     dict(type='CenterCrop', crop_size=224),
     dict(type='Flip', flip_ratio=0),
@@ -63,13 +48,14 @@ val_pipeline = [
     dict(type='ToTensor', keys=['imgs'])
 ]
 test_pipeline = [
+    dict(type='DecordInit'),
     dict(
         type='SampleFrames',
         clip_len=8,
-        frame_interval=8,
+        frame_interval=16,
         num_clips=10,
         test_mode=True),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 256)),
     dict(type='ThreeCrop', crop_size=256),
     dict(type='Flip', flip_ratio=0),
@@ -110,7 +96,6 @@ data = dict(
         filename_tmpl='img_{:05d}.jpg',
         start_index=0,
         pipeline=test_pipeline))
-
 evaluation = dict(
     interval=5, metrics=['top_k_accuracy', 'mean_class_accuracy'])
 
@@ -132,6 +117,6 @@ lr_config = dict(
 total_epochs = 50
 
 # runtime settings
-work_dir = './work_dirs/charades_ego_non_local/'
+work_dir = './work_dirs/i3d/charades_ego_8frame/'
 log_config = dict(interval=50)
 checkpoint_config = dict(interval=5)

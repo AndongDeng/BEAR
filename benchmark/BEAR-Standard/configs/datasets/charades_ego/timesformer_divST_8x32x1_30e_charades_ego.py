@@ -4,18 +4,23 @@ _base_ = ['../../_base_/default_runtime.py']
 model = dict(
     type='Recognizer3D',
     backbone=dict(
-        type='NewTimeSformer',
+        type='TimeSformer',
         num_frames=8,
         img_size=224,
         patch_size=16,
-        attention_type='divided_space_time'),
+        embed_dims=768,
+        in_channels=3,
+        dropout_ratio=0.,
+        transformer_layers=None,
+        attention_type='divided_space_time',
+        norm_cfg=dict(type='LN', eps=1e-6)),
     cls_head=dict(type='TimeSformerHead', num_classes=157, in_channels=768),
     # model training and testing settings
     train_cfg=None,
     test_cfg=dict(average_clips='prob'))
 
 # dataset settings
-dataset_type = 'RawframeDataset'
+dataset_type = 'VideoDataset'
 data_root = 'data/charades_ego/frames/'
 data_root_val = 'data/charades_ego/frames/'
 ann_file_train = 'data/charades_ego/annotations/train.csv'
@@ -26,8 +31,9 @@ img_norm_cfg = dict(
     mean=[127.5, 127.5, 127.5], std=[127.5, 127.5, 127.5], to_bgr=False)
 
 train_pipeline = [
+    dict(type='DecordInit'),
     dict(type='SampleFrames', clip_len=8, frame_interval=16, num_clips=1),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='RandomRescale', scale_range=(256, 320)),
     dict(type='RandomCrop', size=224),
     dict(type='Flip', flip_ratio=0.5),
@@ -37,13 +43,14 @@ train_pipeline = [
     dict(type='ToTensor', keys=['imgs', 'label'])
 ]
 val_pipeline = [
+    dict(type='DecordInit'),
     dict(
         type='SampleFrames',
         clip_len=8,
         frame_interval=16,
         num_clips=1,
         test_mode=True),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 256)),
     dict(type='CenterCrop', crop_size=224),
     dict(type='Normalize', **img_norm_cfg),
@@ -52,13 +59,14 @@ val_pipeline = [
     dict(type='ToTensor', keys=['imgs', 'label'])
 ]
 test_pipeline = [
+    dict(type='DecordInit'),
     dict(
         type='SampleFrames',
         clip_len=8,
         frame_interval=16,
         num_clips=1,
         test_mode=True),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 224)),
     dict(type='ThreeCrop', crop_size=224),
     dict(type='Normalize', **img_norm_cfg),
@@ -67,14 +75,9 @@ test_pipeline = [
     dict(type='ToTensor', keys=['imgs', 'label'])
 ]
 data = dict(
-    videos_per_gpu=6,
+    videos_per_gpu=8,
     workers_per_gpu=4,
-    val_dataloader=dict(
-        videos_per_gpu=1,
-        workers_per_gpu=1),
-    test_dataloader=dict(
-        videos_per_gpu=1,
-        workers_per_gpu=1),
+    test_dataloader=dict(videos_per_gpu=1),
     train=dict(
         type=dataset_type,
         ann_file=ann_file_train,
@@ -85,16 +88,16 @@ data = dict(
     val=dict(
         type=dataset_type,
         ann_file=ann_file_val,
-        data_prefix=data_root_val,
         filename_tmpl='img_{:05d}.jpg',
         start_index=0,
+        data_prefix=data_root_val,
         pipeline=val_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=ann_file_val,
-        data_prefix=data_root_val,
+        ann_file=ann_file_test,
         filename_tmpl='img_{:05d}.jpg',
         start_index=0,
+        data_prefix=data_root_val,
         pipeline=test_pipeline))
 
 evaluation = dict(
@@ -103,7 +106,7 @@ evaluation = dict(
 # optimizer
 optimizer = dict(
     type='SGD',
-    lr=0.00375,
+    lr=0.005,
     momentum=0.9,
     paramwise_cfg=dict(
         custom_keys={

@@ -4,7 +4,7 @@ _base_ = [
 model=dict(backbone=dict(patch_size=(2,4,4), drop_path_rate=0.2), cls_head=dict(num_classes=157), test_cfg=dict(max_testing_views=2))
 
 # dataset settings
-dataset_type = 'RawframeDataset'
+dataset_type = 'VideoDataset'
 data_root = ''
 data_root_val = ''
 ann_file_train = 'data/charades_ego/train.csv'
@@ -13,8 +13,9 @@ ann_file_test = 'data/charades_ego/test.csv'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_bgr=False)
 train_pipeline = [
+    dict(type='DecordInit'),
     dict(type='SampleFrames', clip_len=8, frame_interval=16, num_clips=1),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 256)),
     dict(type='RandomResizedCrop'),
     dict(type='Resize', scale=(224, 224), keep_ratio=False),
@@ -25,13 +26,14 @@ train_pipeline = [
     dict(type='ToTensor', keys=['imgs', 'label'])
 ]
 val_pipeline = [
+    dict(type='DecordInit'),
     dict(
         type='SampleFrames',
         clip_len=8,
         frame_interval=16,
         num_clips=1,
         test_mode=True),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 256)),
     dict(type='CenterCrop', crop_size=224),
     dict(type='Flip', flip_ratio=0),
@@ -41,13 +43,14 @@ val_pipeline = [
     dict(type='ToTensor', keys=['imgs'])
 ]
 test_pipeline = [
+    dict(type='DecordInit'),
     dict(
         type='SampleFrames',
         clip_len=8,
         frame_interval=16,
         num_clips=4,
         test_mode=True),
-    dict(type='RawFrameDecode'),
+    dict(type='DecordDecode'),
     dict(type='Resize', scale=(-1, 224)),
     dict(type='ThreeCrop', crop_size=224),
     dict(type='Flip', flip_ratio=0),
