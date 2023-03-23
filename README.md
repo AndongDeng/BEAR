@@ -54,7 +54,7 @@ We provide downloading and pre-processing pipeline [here](https://github.com/BEA
 
 
 ## Benchmark
-We provide 4 evaluation paradigms in BREA:
+We provide 4 evaluation paradigms in <img src="figs/bear.png" width="14"/>**BEAR**:
 
 [BEAR-Standard](#standard-finetuning)<br>
 [BEAR-Fewshot](#few-shot-finetuning)<br>
