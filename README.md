@@ -71,7 +71,7 @@ The pre-trained models can be downloaded from below:
 ## Standard Finetuning
 We build our stanard finetuning based on a popular video understanding toolbox [MMAction2](https://github.com/open-mmlab/mmaction2).
 
-We provide specific training steps [here](https://github.com/BEAR-CVPR2023/BEAR/tree/main/benchmark/finetuning).
+We provide specific training steps [here](benchmark/finetuning).
 
 The finetuning results of supervised pre-training are shown below: 
 
@@ -121,7 +121,7 @@ The finetuning results of self-supervised pre-training are shown below:
 
 
 ## Few-shot Finetuning
-Please follow the instructions [here](benchmark/zero-shot/README.md) to perform few-shot evaluation on BEAR.
+Please follow the instructions [here](benchmark/zero-shot/) to perform few-shot evaluation on BEAR.
 
 The few-shot results are shown below: 
 
@@ -130,7 +130,7 @@ The few-shot results are shown below:
 </div>
 
 ## Zero-shot Evaluation
-We build our zero-shot part based on the popular [CLIP](https://github.com/openai/CLIP) and [ActionCLIP](https://github.com/sallymmx/actionclip). Follow the instructions [here](benchmark/zero-shot/README.md) to evaluate zero-shot performance on BEAR.
+We build our zero-shot part based on the popular [CLIP](https://github.com/openai/CLIP) and [ActionCLIP](https://github.com/sallymmx/actionclip). Follow the instructions [here](benchmark/zero-shot/) to evaluate zero-shot performance on BEAR.
 
 The zero-shot results are shown below: 
 
@@ -140,7 +140,7 @@ The zero-shot results are shown below:
 
 
 ## Domain Adaptation
-Please follow the instructions [here](benchmark/domain-adaptation/README.md) to perform UDA evaluation on BEAR.
+Please follow the instructions [here](benchmark/domain-adaptation/) to perform UDA evaluation on BEAR.
 
 The UDA baseline results are shown below: 
 | Dataset               |   T>M    | M>T | MS>MOD | MOD>MS | U>X | X>U | P>MS | Jester | IT>IL | IT>IR | IL>IR | IL>IT | IR>IT | IR>L |
