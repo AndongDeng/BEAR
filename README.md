@@ -78,7 +78,7 @@ The pre-trained models can be downloaded from below:
 ## Standard Finetuning
 We build our stanard finetuning based on a popular video understanding toolbox [MMAction2](https://github.com/open-mmlab/mmaction2).
 
-We provide specific training steps [here](BEAR/finetuning).
+We provide specific training steps [here](BEAR/BEAR-Standard/).
 
 The finetuning results of supervised pre-training are shown below: 
 
@@ -128,7 +128,7 @@ The finetuning results of self-supervised pre-training are shown below:
 
 
 ## Few-shot Finetuning
-Please follow the instructions [here](BEAR/zero-shot/) to perform few-shot evaluation on <img src="figs/bear.png" width="14"/>**BEAR**.
+Please follow the instructions [here](BEAR/BEAR-Fewshot/) to perform few-shot evaluation on <img src="figs/bear.png" width="14"/>**BEAR**.
 
 The few-shot results are shown below: 
 
@@ -137,7 +137,7 @@ The few-shot results are shown below:
 </div>
 
 ## Zero-shot Evaluation
-We build our zero-shot part based on the popular [CLIP](https://github.com/openai/CLIP) and [ActionCLIP](https://github.com/sallymmx/actionclip). Follow the instructions [here](BEAR/zero-shot/) to evaluate zero-shot performance on <img src="figs/bear.png" width="14"/>**BEAR**.
+We build our zero-shot part based on the popular [CLIP](https://github.com/openai/CLIP) and [ActionCLIP](https://github.com/sallymmx/actionclip). Follow the instructions [here](BEAR/BEAR-Zeroshot/) to evaluate zero-shot performance on <img src="figs/bear.png" width="14"/>**BEAR**.
 
 The zero-shot results are shown below: 
 
@@ -147,7 +147,7 @@ The zero-shot results are shown below:
 
 
 ## Domain Adaptation
-Please follow the instructions [here](BEAR/domain-adaptation/) to perform UDA evaluation on <img src="figs/bear.png" width="14"/>**BEAR**.
+Please follow the instructions [here](BEAR/BEAR-UDA/) to perform UDA evaluation on <img src="figs/bear.png" width="14"/>**BEAR**.
 
 The UDA baseline results are shown below: 
 | Dataset               |   T>M    | M>T | MS>MOD | MOD>MS | U>X | X>U | P>MS | Jester | IT>IL | IT>IR | IL>IR | IL>IT | IR>IT | IR>L |
