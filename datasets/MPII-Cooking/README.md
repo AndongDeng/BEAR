@@ -6,18 +6,8 @@ MPII Cooking dataset is a fine-grained cooking activity dataset, which is origin
 
 ## Download and preprocessing
 
-### 1. Download videos
-
-- The dataset are officially released:
-
-    [videos as avis(8.7GB)](http://datasets.d2.mpi-inf.mpg.de/MPIICookingActivities/videos.zip)<br>
-
-
-- Put all the files under:  `./data/mpii_cooking/videos`
-
-### 2. Preprocessing
-
 - Run the following command: 
+
     ```
-    bash prerpocess_mpii_cooking.sh
+    bash download_prerpocess_mpii_cooking.sh
     ```
