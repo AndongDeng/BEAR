@@ -1,7 +1,7 @@
 # BEAR: A BEnchmark on video Action Recognition
 ###  [ArXiv]()
 
-[BEAR]() <br>
+[A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition]() <br>
  [Andong Deng](https://dengandong.github.io/)<sup>1</sup>,
  [Taojiannan Yang](https://sites.google.com/view/taojiannanyang/home)<sup>1</sup>,
  [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<sup>1</sup><br>
@@ -47,7 +47,14 @@ We provide downloading and pre-processing pipeline [here](https://github.com/BEA
 
 
 ## Benchmark
-### Pre-trained Models
+We provide 4 downstream tasks in BREA:
+
+[Standard Finetuning](#standard-finetuning)<br>
+[Few-shot Finetuning](#few-shot-finetuning)<br>
+[Zero-shot Evaluation](#zero-shot-evaluation)<br>
+[UDA](#domain-adaptation)<br>
+
+## Pre-trained Models
 Based on pre-trained models on Kinetics400, we provide 4 types of down stream tasks for evaluation: standard finetuning, few-shot finetuning, zero-shot evaluation and domain adaptation.
 
 The pre-trained models can be downloaded from below:
@@ -61,7 +68,7 @@ The pre-trained models can be downloaded from below:
 | VideoSwin     | 77.6 [Google Drive]()     | 51.1 [Google Drive]() |
 
 
-### Standard Finetuning
+## Standard Finetuning
 We build our stanard finetuning based on a popular video understanding toolbox [MMAction2](https://github.com/open-mmlab/mmaction2).
 
 We provide specific training steps [here](https://github.com/BEAR-CVPR2023/BEAR/tree/main/benchmark/finetuning).
@@ -113,7 +120,7 @@ The finetuning results of self-supervised pre-training are shown below:
 | **MISAW** | 59.04 | **73.64** | 70.37 | 64.27 | 60.78 | 68.85 |
 
 
-### Few-shot Finetuning
+## Few-shot Finetuning
 Please follow the instructions [here](benchmark/zero-shot/README.md) to perform few-shot evaluation on BEAR.
 
 The few-shot results are shown below: 
@@ -122,7 +129,7 @@ The few-shot results are shown below:
     <img src="figs/fewshot.png">
 </div>
 
-### Zero-shot Evaluation
+## Zero-shot Evaluation
 We build our zero-shot part based on the popular [CLIP](https://github.com/openai/CLIP) and [ActionCLIP](https://github.com/sallymmx/actionclip). Follow the instructions [here](benchmark/zero-shot/README.md) to evaluate zero-shot performance on BEAR.
 
 The zero-shot results are shown below: 
@@ -132,7 +139,7 @@ The zero-shot results are shown below:
 </div>
 
 
-### Domain Adaptation
+## Domain Adaptation
 Please follow the instructions [here](benchmark/domain-adaptation/README.md) to perform UDA evaluation on BEAR.
 
 The UDA baseline results are shown below: 
@@ -143,7 +150,17 @@ The UDA baseline results are shown below:
 
 
 
+## Citation
+If you find our work useful in your research, please cite:
 
+```
+@article{deng2023BEAR,
+  title={A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition},
+  author={Deng, Andong and Yang, Taojiannan and Chen, Chen},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2023}
+}
+```
 
 
 
