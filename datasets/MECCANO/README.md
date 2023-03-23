@@ -7,18 +7,12 @@ MECCANO is related to an assembly operation but collected with wearable cameras.
 
 ## Download and preprocessing
 
-### 1. Download videos
-
-- The dataset is officially released:
-
-    [RGB Videos](https://iplab.dmi.unict.it/sharing/MECCANO/MECCANO_RGB_Videos.zip)<br>
-    [Action Temporal Annotations](https://iplab.dmi.unict.it/sharing/MECCANO/MECCANO_action_annotations.zip)
-
-- Put all the files under:  `./data/meccano/videos`
-
-### 2. Preprocessing
-
-- Run the following command: 
+- Run the following command for downloading and preprocessing: 
     ```
-    bash prerpocess_meccano.sh
+    bash download_prerpocess_meccano.sh
+    ```
+
+- Note3: If you want to keep the original videos, just remove the last line in `download_preprocess_meccano.sh`:
+    ```
+    rm -rf raw_meccano_videos/
     ```
