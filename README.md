@@ -50,7 +50,7 @@ The following table includes all the statistics about the 18 datasets collected 
 
 
 ## Datasets Download and Pre-processing
-We provide downloading and pre-processing pipeline [here](https://github.com/BEAR-CVPR2023/BEAR/tree/main/datasets) for each dataset.
+We provide downloading and pre-processing pipeline [here](BEAR-datasets/) for each dataset.
 
 
 ## Benchmark
