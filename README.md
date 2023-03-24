@@ -1,4 +1,4 @@
-# <img src="figs/bear.png" width="30"/> BEAR: a new BEnchmark on video Action Recognition [[ArXiv]](https://arxiv.org/pdf/2303.13505.pdf)
+# <img src="figs/bear.png" width="30"/> BEAR: a new BEnchmark on video Action Recognition
 This repo contains the data and pre-trained models in ["A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition"](https://arxiv.org/abs/2303.13505)
 
 [Andong Deng](https://dengandong.github.io/)\*, [Taojiannan Yang](https://taoyang1122.github.io/)\*, [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<br>
