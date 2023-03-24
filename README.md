@@ -16,6 +16,8 @@ If you find our work useful in your research, please cite:
 
 
 ## Updates
+***03/24/2023*** Update Dropbox link for [Mini-Sports1M](datasets/mini-Sports1M/).
+
 ***03/23/2023*** Initial commits
 
 
