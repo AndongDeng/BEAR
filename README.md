@@ -54,7 +54,7 @@ We provide downloading and pre-processing pipeline [here](datasets#download-and-
 
 
 ## Benchmark
-We provide 4 evaluation paradigms in <img src="figs/bear.png" width="14"/>**BEAR**:
+Based on pre-trained models on Kinetics400, we provide 4 types of evaluation paradigms in <img src="figs/bear.png" width="14"/>**BEAR**: 
 
 [BEAR-Standard](#standard-finetuning)<br>
 [BEAR-Fewshot](#few-shot-finetuning)<br>
@@ -62,9 +62,9 @@ We provide 4 evaluation paradigms in <img src="figs/bear.png" width="14"/>**BEAR
 [BEAR-UDA](#domain-adaptation)<br>
 
 ## Pre-trained Models
-Based on pre-trained models on Kinetics400, we provide 4 types of down stream tasks for evaluation: standard finetuning, few-shot finetuning, zero-shot evaluation and domain adaptation.
+We prepare Kinetics-400 pre-trained models with both supervised and self-supervised pre-training:
 
-The pre-trained models can be downloaded from below:
+The pre-trained models can be downloaded from below if needed:
 | model         | Supervised (Top-1 Accuracy) | Self-supervised (KNN evaluation)  |
 | ------------- | --------- | ---- |
 | TSN           | 77.6 [Google Drive](https://drive.google.com/file/d/1dcrNidY0XlZKJCl6T4ta_La1dzceoWKp/view?usp=share_link)     | 43.1 [Google Drive]() |
