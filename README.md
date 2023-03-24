@@ -1,7 +1,7 @@
 # <img src="figs/bear.png" width="30"/> BEAR: A BEnchmark on video Action Recognition
-###  [ArXiv]()
+###  [ArXiv](https://arxiv.org/abs/2303.13505)
 
-[A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition]() <br>
+[A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition](https://arxiv.org/pdf/2303.13505.pdf) <br>
  [Andong Deng](https://dengandong.github.io/)<sup>1</sup>,
  [Taojiannan Yang](https://sites.google.com/view/taojiannanyang/home)<sup>1</sup>,
  [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<sup>1</sup><br>
@@ -164,7 +164,7 @@ If you find our work useful in your research, please cite:
 @article{deng2023BEAR,
   title={A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition},
   author={Deng, Andong and Yang, Taojiannan and Chen, Chen},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  journal={arXiv preprint arXiv:2303.13505},
   year={2023}
 }
 ```
