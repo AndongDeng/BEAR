@@ -1,15 +1,18 @@
-# <img src="figs/bear.png" width="30"/> BEAR: A BEnchmark on video Action Recognition
-###  [ArXiv](https://arxiv.org/abs/2303.13505)
+# <img src="figs/bear.png" width="30"/> BEAR: a new BEnchmark on video Action Recognition [[ArXiv]](https://arxiv.org/pdf/2303.13505.pdf)
+This repo contains the data and pre-trained models in ["A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition"](https://arxiv.org/abs/2303.13505)
 
-[A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition](https://arxiv.org/pdf/2303.13505.pdf) <br>
- [Andong Deng](https://dengandong.github.io/)<sup>1</sup>,
- [Taojiannan Yang](https://sites.google.com/view/taojiannanyang/home)<sup>1</sup>,
- [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<sup>1</sup><br>
- <sup>1</sup> [CRCV](https://www.crcv.ucf.edu/), [University of Central Florida](https://www.ucf.edu/)
+[Andong Deng](https://dengandong.github.io/)\*, [Taojiannan Yang](https://taoyang1122.github.io/)\*, [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<br>
+[Center for Research in Computer Vision](https://www.crcv.ucf.edu/), [University of Central Florida](https://www.ucf.edu/)
 
-<div align="center">
-    <img src="figs/BEAR_teaser.jpg">
-</div>
+If you find our work useful in your research, please cite:
+```
+@article{deng2023BEAR,
+  title={A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition},
+  author={Deng, Andong and Yang, Taojiannan and Chen, Chen},
+  journal={arXiv preprint arXiv:2303.13505},
+  year={2023}
+}
+```
 
 
 ## Updates
@@ -17,6 +20,9 @@
 
 
 ## Introduction
+<div align="center">
+    <img src="figs/BEAR_teaser.jpg">
+</div>
 The goal of building a benchmark (suite of datasets) is to provide a unified protocol for fair evaluation and thus facilitate the evolution of a specific area. Nonetheless, we point out that existing protocols of action recognition could yield partial evaluations due to several limitations. 
 
 To comprehensively probe the effectiveness of spatiotemporal representation learning, we introduce <img src="figs/bear.png" width="14"/>**BEAR**, a new **BE**nchmark on video **A**ction **R**ecognition. <img src="figs/bear.png" width="14"/>**BEAR** is a collection of 18 video datasets grouped into 5 categories (anomaly, gesture, daily, sports, and instructional), which covers a diverse set of real-world applications. With <img src="figs/bear.png" width="14"/>**BEAR**, we thoroughly evaluate 6 common spatiotemporal models pre-trained by both supervised and self-supervised learning. We also report transfer performance via standard finetuning, few-shot finetuning, and unsupervised domain adaptation. Our observation suggests that current state-of-the-arts cannot solidly guarantee high performance on datasets close to real-world applications and we hope <img src="figs/bear.png" width="14"/>**BEAR** can serve as a fair and challenging evaluation benchmark to gain insights on building next-generation spatiotemporal learners.
@@ -156,19 +162,6 @@ The UDA baseline results are shown below:
 | Source only           | 5.32    | 7.36    | 18.25   | 12.76   | 54.20   | 33.33   | 61.45   | 68.73  | 4.18    | 30.39   | 19.01   | 22.65   | 24.14   | 12.42   |
 | Supervised target     | 70.21   | 65.13   | 34.08   | 35.52   | 75.06   | 63.89   | 94.40   | 97.61  | 26.00   | 83.55   | 83.55   | 85.52   | 85.52   | 26.00   |
 
-
-
-## Citation
-If you find our work useful in your research, please cite:
-
-```
-@article{deng2023BEAR,
-  title={A Large-scale Study of Spatiotemporal Representation Learning with a New Benchmark on Action Recognition},
-  author={Deng, Andong and Yang, Taojiannan and Chen, Chen},
-  journal={arXiv preprint arXiv:2303.13505},
-  year={2023}
-}
-```
 
 
 
