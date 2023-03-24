@@ -53,14 +53,6 @@ The following table includes all the statistics about the 18 datasets collected 
 We provide downloading and pre-processing pipeline [here](datasets#download-and-preprocessing) for each dataset.
 
 
-## Benchmark
-Based on pre-trained models on Kinetics400, we provide 4 types of evaluation paradigms in <img src="figs/bear.png" width="14"/>**BEAR**: 
-
-[BEAR-Standard](#standard-finetuning)<br>
-[BEAR-Fewshot](#few-shot-finetuning)<br>
-[BEAR-Zeroshot](#zero-shot-evaluation)<br>
-[BEAR-UDA](#domain-adaptation)<br>
-
 ## Pre-trained Models
 We prepare Kinetics-400 pre-trained models with both supervised and self-supervised pre-training:
 
@@ -73,6 +65,15 @@ The pre-trained models can be downloaded from below if needed:
 | NL            | 73.9 [Google Drive]()     | 50.7 [Google Drive]() |
 | TimeSformer   | 75.8 [Google Drive]()     | 50.3 [Google Drive]() |
 | VideoSwin     | 77.6 [Google Drive]()     | 51.1 [Google Drive]() |
+
+
+## Benchmark
+Based on pre-trained models on Kinetics400, we provide 4 types of evaluation paradigms in <img src="figs/bear.png" width="14"/>**BEAR**: 
+
+[BEAR-Standard](#standard-finetuning)<br>
+[BEAR-Fewshot](#few-shot-finetuning)<br>
+[BEAR-Zeroshot](#zero-shot-evaluation)<br>
+[BEAR-UDA](#domain-adaptation)<br>
 
 
 ## Standard Finetuning
