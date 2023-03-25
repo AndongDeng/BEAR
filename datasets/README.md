@@ -36,7 +36,7 @@ The 18 datasets cover 5 data domains:
 
 ## Download and Preprocessing
 
-We provide download and pre-processing approaches for all 18 datasets here. It should be noted that for [UAV-Human](UAV-Human/README.md), [ToyotaSmarthome](ToyotaSmarthome/README.md) and [MUVIM](MUVIM/README.md), there are no direct downloading scripts, since the data access must be requested from the owners of the datasets and there shall be no redistribution of these datasets. Besides, MISAW, PETRAW require sign-in for Synapse and XD-Violence and MOD20 provide Onedrive and Google drive link, respectively.
+We provide download and pre-processing approaches for all 18 datasets here. It should be noted that for [UAV-Human](UAV-Human/README.md), [ToyotaSmarthome](ToyotaSmarthome/README.md) and [MUVIM](MUVIM/README.md), there are no direct downloading scripts, since the data access must be requested from the owners of the datasets and there shall be no redistribution of these datasets. Besides, [MISAW](MISAW/README.md), [PETRAW](PETRAW/README.md) require sign-in for Synapse and [XD-Violence](XD-Violence/README.md) and [MOD20](MOD20/README.md) provide Onedrive and Google drive link, respectively.
 
 
 - You can doanload and preprocess the rest 11 datasets via one command:
