@@ -4,15 +4,14 @@
 
 UCF-Crime is a challenging anomaly video dataset collected from surveillance cameras. We select 12 human-related crime categories from its original 14-class recognition version as we only focus on human actions.
 
+The videos are officially provided in [Dropbox](https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?dl=0).
+
+    
 ## Download and preprocessing
 
-### 1. Download videos
-
-- The videos are officially provided in Dropbox with the following link:
-
-    [Dropbox](https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?dl=0)
-
-    **Note**: Each zip file can be unzip separately. (*TODO*)
+- Run the following command: 
+    ```
+    bash download_prerpocess_ucf_crime.sh
+    ```
 
 
-- Put all the zip files under:  `./data/UCF-Crime/videos`

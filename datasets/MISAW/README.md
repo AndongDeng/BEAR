@@ -10,7 +10,9 @@ To cover scenarios as much as possible, we add two medical instructional dataset
 
 - The dataset is released [here](https://www.synapse.org/#!Synapse:syn21776936/files/).
 
-- Put all the files under:  `./data/misaw/videos`
+- You have to sign in Synapse before downloading.
+
+- Put all the .rar files under:  `./data/misaw/videos` and extract.
 
 ### 2. Preprocessing
 
