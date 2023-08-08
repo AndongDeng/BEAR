@@ -4,6 +4,8 @@ This repo contains the data and pre-trained models in ["A Large-scale Study of S
 [Andong Deng](https://dengandong.github.io/)\*, [Taojiannan Yang](https://taoyang1122.github.io/)\*, [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<br>
 [Center for Research in Computer Vision](https://www.crcv.ucf.edu/), [University of Central Florida](https://www.ucf.edu/)
 
+[[CVF]]()(comming soon)
+
 If you find our work useful in your research, please cite:
 ```
 @article{deng2023BEAR,
