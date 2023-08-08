@@ -16,6 +16,8 @@ If you find our work useful in your research, please cite:
 
 
 ## Updates
+***08/08/2023*** Update Dropbox link for pre-trained models.
+
 ***03/24/2023*** Update Dropbox link for [Mini-Sports1M](datasets/mini-Sports1M/).
 
 ***03/23/2023*** Initial commits
@@ -67,12 +69,12 @@ We prepare Kinetics-400 pre-trained models with both supervised and self-supervi
 The pre-trained models can be downloaded from below if needed:
 | model         | Supervised (Top-1 Accuracy) | Self-supervised (KNN evaluation)  |
 | ------------- | --------- | ---- |
-| TSN           | 77.6 [Google Drive](https://drive.google.com/file/d/1dcrNidY0XlZKJCl6T4ta_La1dzceoWKp/view?usp=share_link)     | 43.1 [Google Drive]() |
-| TSM           | 76.4 [Google Drive]()      | 43.2 [Google Drive]() |
-| I3D           | 74.2 [Google Drive]()      | 51.3 [Google Drive]() |
-| NL            | 73.9 [Google Drive]()     | 50.7 [Google Drive]() |
-| TimeSformer   | 75.8 [Google Drive]()     | 50.3 [Google Drive]() |
-| VideoSwin     | 77.6 [Google Drive]()     | 51.1 [Google Drive]() |
+| TSN           | 77.6 [Dropbox](https://www.dropbox.com/scl/fi/66ckz8k0zslgpv41bna15/tsn_convnext_8frame_k400.pth?rlkey=86g82ctliivlnsnohg644q1c6&dl=0)      | 43.1 [Dropbox](https://www.dropbox.com/scl/fi/irzynudf5f440j1bf96fg/convnext_tsn_ssl.pyth_converted.pth?rlkey=9tcyr5n7lwfgq1769timbf0uj&dl=0) |
+| TSM           | 76.4 [Dropbox](https://www.dropbox.com/scl/fi/f1rd8v2j370m5fjmb9q7e/tsm_convnext_8frame_k400.pth?rlkey=8hve0s4tqn7ierw9w6hnk25wq&dl=0)      | 43.2 [Dropbox]() |
+| I3D           | 74.2 [Dropbox](https://www.dropbox.com/scl/fi/xmlmpbrbl2whtnocinbl5/i3d_best_at_25e_k400.pth?rlkey=b1n8sc8bpyazwpk0mk2dpv6vl&dl=0)      | 51.3 [Dropbox](https://www.dropbox.com/scl/fi/ptr4oxzyw61qg0gi4u7aj/convnext_i3d_ssl_converted.pth?rlkey=8oghtx21ibjdgbnjf67ds6d4y&dl=0) |
+| NL            | 73.9 [Dropbox](https://www.dropbox.com/scl/fi/leklbhqze9zb8ezyokn9d/nonlocal_best_at_27epoch.pth?rlkey=6ia0f96vulp35m8in8awhx7lx&dl=0)      | 50.7 [Dropbox](https://www.dropbox.com/scl/fi/l8f0856njxmhxkoyt364b/i3dnonlocal_ssl_k400_converted.pth?rlkey=p4yk4wp4949p9qgy0ut9bcd5r&dl=0) |
+| TimeSformer   | 75.8 [Dropbox](https://www.dropbox.com/scl/fi/al0yo1g0lxijbyvqe9nog/timesformer_divST_8x32x1_15e_kinetics400_rgb-3f8e5d03.pth?rlkey=07d8nczq5c3rczrrjammyg7wb&dl=0)      | 50.3 [Dropbox](https://www.dropbox.com/scl/fi/et1r255z294s0bkorobg0/timesformer_ssl_8frame.pyth?rlkey=3hu1y8pkrss71fmidlvl5vff6&dl=0) |
+| VideoSwin     | 77.6 [Dropbox](https://www.dropbox.com/scl/fi/se10ntf2ijqeciwqylz6o/videoswin_8frame_30epoch.pth?rlkey=8u029stmnha5v9naqeutjofwp&dl=0)      | 51.1 [Dropbox](https://www.dropbox.com/scl/fi/qv28b9vrfd95xn84dwtzo/videoswin_8frame_ssl.pth?rlkey=4l65j2j9txncb5hqaiat0lswf&dl=0) |
 
 
 ## Benchmark
