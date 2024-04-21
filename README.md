@@ -18,9 +18,11 @@ If you find our work useful in your research, please cite:
 
 
 ## Updates
+***04/21/2024*** Update HuggingFace link for pre-trained models.
+
 ***08/08/2023*** Update Dropbox link for pre-trained models.
 
-***07/017/2023*** BEAR is accepted by *ICCV 2023*!
+***07/17/2023*** BEAR is accepted by *ICCV 2023*!
 
 ***03/24/2023*** Update Dropbox link for [Mini-Sports1M](datasets/mini-Sports1M/).
 
@@ -69,6 +71,10 @@ We provide downloading and pre-processing pipeline [here](datasets#download-and-
 
 ## Pre-trained Models
 We prepare Kinetics-400 pre-trained models with both supervised and self-supervised pre-training:
+
+The updated HuggingFace Link for both self-supervised pretraining and supervised pretraining are here:
+
+[SSL](https://huggingface.co/dengandong/BEAR_SSL)  [SUP](https://huggingface.co/dengandong/BEAR_SUP)
 
 The pre-trained models can be downloaded from below if needed:
 | model         | Supervised (Top-1 Accuracy) | Self-supervised (KNN evaluation)  |
