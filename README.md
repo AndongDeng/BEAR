@@ -4,7 +4,7 @@ This repo contains the data and pre-trained models in ["A Large-scale Study of S
 [Andong Deng](https://dengandong.github.io/)\*, [Taojiannan Yang](https://taoyang1122.github.io/)\*, [Chen Chen](https://www.crcv.ucf.edu/chenchen/)<br>
 [Center for Research in Computer Vision](https://www.crcv.ucf.edu/), [University of Central Florida](https://www.ucf.edu/)
 
-[[CVF]]()(comming soon)
+[[CVF]](https://openaccess.thecvf.com/content/ICCV2023/papers/Deng_A_Large-scale_Study_of_Spatiotemporal_Representation_Learning_with_a_New_ICCV_2023_paper.pdf)
 
 If you find our work useful in your research, please cite:
 ```
@@ -68,6 +68,13 @@ The following table includes all the statistics about the 18 datasets collected 
 ## Datasets Download and Pre-processing
 We provide downloading and pre-processing pipeline [here](datasets#download-and-preprocessing) for each dataset.
 
+The HuggingFace link for part of BEAR datasets are here:
+
+[Mini-Sports1M](https://huggingface.co/datasets/dengandong/BEAR-Mini-Sports1M)
+[Jester](https://huggingface.co/datasets/dengandong/BEAR-Jester)
+[FineGym](https://huggingface.co/datasets/dengandong/BEAR-FineGym)
+[MOD20](https://huggingface.co/datasets/dengandong/BEAR-MOD20)
+[MPII-Cooking2](https://huggingface.co/datasets/dengandong/BEAR-MPII-Cooking2)
 
 ## Pre-trained Models
 We prepare Kinetics-400 pre-trained models with both supervised and self-supervised pre-training:
